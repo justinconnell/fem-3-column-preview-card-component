@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+
+:root {
+  --color-very-dark-cyan: hsl(179, 100%, 13%);
+  --color-dark-cyan: hsl(184, 100%, 22%);
+  --color-bright-orange: hsl(31, 77%, 52%);
+
+  --btn-bg-color: hsl(0, 0%, 95%);
+  --btn-border-color: hsl(0, 0%, 95%);
+  --btn-font-family: "Lexend Deca", sans-serif;
+  --btn-font-weight: 400;
+  --btn-font-size: 15px;
+
+  --heading-font-family: "Big Shoulders Display", sans-serif;
+  --heading-font-weight: 700;
+  --heading-font-size: 40px;
+  --heading-color: hsl(0, 0%, 95%);
+
+  --body-font-family: "Lexend Deca", sans-serif;
+  --body-font-weight: 400;
+  --body-font-size: 15px;
+  --body-line-height: 25px;
+  --body-color: hsla(0, 0%, 100%, 0.75);
+
+  --card-width-mobile: 327px;
+  --card-height-mobile: 442px;
+  --card-width-desktop: 307px;
+  --card-height-desktop: 500px;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: hsl(0deg 0% 94.9%);
+}
+
+/* Layout */
+
+.cards {
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: var(--card-width-mobile);
+  height: var(--card-height-mobile);
+  padding: 48px 49px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.card:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+.card:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+.card__icon {
+  display: inline-block;
+  width: 64px;
+  height: 40px;
+}
+
+.card__heading {
+  margin-bottom: 25px;
+  margin-top: 35px;
+}
+
+.card__text {
+  margin-bottom: 25px;
+}
+
+.card__btn {
+  display: inline-block;
+}
+
+/* Styling */
+
+.card__heading {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+
+.card__text {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-height);
+  color: var(--body-color);
+}
+
+.card__btn {
+  border: 2px solid var(--btn-bg-color);
+  border-radius: 50px;
+  padding: 13px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  font-weight: var(--btn-font-weight);
+  background-color: var(--btn-bg-color);
+}
+
+.font-orange {
+  color: var(--color-bright-orange);
+}
+
+.font-very-dark-cyan {
+  color: var(--color-very-dark-cyan);
+}
+
+.font-dark-cyan {
+  color: var(--color-dark-cyan);
+}
+
+.bg-orange {
+  background-color: var(--color-bright-orange);
+}
+
+.bg-very-dark-cyan {
+  background-color: var(--color-very-dark-cyan);
+}
+
+.bg-dark-cyan {
+  background-color: var(--color-dark-cyan);
+}
+
+footer {
+  display: none;
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+  }
+  .cards {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto;
+    margin: auto auto;
+  }
+
+  .card {
+    width: var(--card-width-desktop);
+    height: var(--card-height-desktop);
+    padding: 24px 49px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .card__icon {
+    margin-bottom: 0px;
+  }
+
+  .card__text {
+    margin-bottom: 85px;
+  }
+
+  .card:first-of-type {
+    border-radius: 8px 0 0 8px;
+  }
+
+  .card:last-of-type {
+    border-radius: 0 8px 8px 0;
+  }
+}
