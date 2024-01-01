@@ -44,7 +44,7 @@ body {
   background: hsl(0deg 0% 94.9%);
 }
 
-/* Layout */
+/* Mobile layout */
 
 .cards {
   margin: auto;
@@ -160,17 +160,15 @@ footer {
   color: hsl(228, 45%, 44%);
 }
 
+/* Desktop layout */
+
 @media (min-width: 1440px) {
-  main {
-    height: 100vh;
-    width: 100vw;
-  }
   .cards {
-    width: 100%;
-    height: 100%;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: auto;
-    margin: auto auto;
+    align-items: start;
+    justify-content: center;
+    margin-top: 260px;
   }
 
   .card {
