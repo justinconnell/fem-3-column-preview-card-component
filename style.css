@@ -122,6 +122,12 @@ body {
   background-color: var(--btn-bg-color);
 }
 
+.card__btn:hover,
+.card__btn:focus {
+  background-color: transparent;
+  color: var(--btn-bg-color);
+}
+
 .font-orange {
   color: var(--color-bright-orange);
 }
@@ -194,7 +200,7 @@ footer {
   }
 
   .card__btn {
-    margin-top: 60px;
+    margin-top: 58px;
     display: inline-block;
   }
 
