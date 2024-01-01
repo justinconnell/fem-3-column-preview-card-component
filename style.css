@@ -177,16 +177,25 @@ footer {
     padding: 24px 49px;
     display: flex;
     align-items: flex-start;
-    justify-content: flex-end;
+    justify-content: flex-start;
     flex-direction: column;
   }
 
   .card__icon {
-    margin-bottom: 0px;
+    margin-top: 24px;
+  }
+
+  .card__heading {
+    margin-top: 35px;
   }
 
   .card__text {
-    margin-bottom: 85px;
+    margin-top: 0px;
+  }
+
+  .card__btn {
+    margin-top: 56px;
+    display: inline-block;
   }
 
   .card:first-of-type {
